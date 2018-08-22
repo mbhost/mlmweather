@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flat Responsive Weather Plugin</title>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+<!--Plugin css file ------>
+<link rel="stylesheet" type="text/css" href="css/ideaboxWeather.css"/>
+<!--Jquery library ------->
+<script src="js/jQuery.js"></script>
+<!--Plugin js file ------->
+<script src="js/ideaboxWeather.js"></script>
+</head>
+
+<style>
+	/*demo page css style */
+	body{padding:0; margin:0; font-family:'Open Sans'; font-size:14px; background:#FFF;}
+		header{width:100%; box-sizing:border-box; padding:40px; text-align:center; background:#403934; color:#FFF;}
+		header h1{font-size:36px; font-weight:normal;}
+		
+		section{width:100%; max-width:1000px; margin:0 auto; padding:20px; overflow:hidden; box-sizing:border-box;}
+		article{width:100%; overflow:hidden; margin-bottom:30px; padding-bottom:30px; border-bottom:dotted 2px #000;}
+		article .i-left{width:35%; float:left; background:#FF0;}
+		article .i-right{width:55%; float:right;}
+		article .i-right img, .description img {width:100%;}
+		.description {padding:30px 0; text-align:center;}
+		.description ul{list-style:none;}
+		
+		/*popup style*/
+		.ipopup{position:fixed; z-index:1000; text-align:center; background:rgba(0,0,0,0.6); left:0; top:0; right:0; bottom:0;}
+		.ipopup img{display:inline-block; margin-top:100px;}
+		.ipopup h2{color:#F00; cursor:pointer; padding:0; margin:0; margin-top:50px;}
+	/*demo page css style */
+</style>
+
+<body>
+
+	<header>
+    	<h1>Ideabox - Flat Responsive Weather Plugin</h1>
+        <h3>Jquery Plugin</h3>
+    </header>
+    
+    <section>
+    	<div class="description">
+        	<h2>Features of Ideabox - Flat Responsive Weather Plugin</h2>
+        	<ul>
+                <li>This plugin supported <a href="http://openweathermap.com" target="_blank">openweathermap.com</a> languages.</li>
+                <li>Unlimited color options.</li>
+                <li>Flat or openweathermap.com icon style.</li>
+                <li>1-16 day weather report.</li>
+                <li>Fahrenheit or Celsius metric options.</li>
+                <li>Vertical or horizontal options.</li>
+                <li>With border radius or without options</li>
+            </ul>
+        </div>
+    	<!--Example plugin 1 -->
+    	<article>
+        	<div class="i-left">
+            	<!-- Plugin code start ---------->
+                <div class="ideaboxWeather" id="example1">
+                    <h1>Loading....</h1>
+                </div>
+                <!-- Plugin code end ------------>
+            </div>
+            <div class="i-right">
+            	<h4>Click image for full view</h4>
+            	<a href="trash/example1.png"><img src="trash/example1.png"></a>
+            </div>
+        </article>
+        
+        <!--Example plugin 2 -->
+    	<article>
+        	<div class="i-left">
+            	<!-- Plugin code start ---------->
+                <div class="ideaboxWeather" id="example2">
+                    <h1>Loading....</h1>
+                </div>
+                <!-- Plugin code end ------------>
+            </div>
+            <div class="i-right">
+            	<h4>Click image for full view</h4>
+            	<a href="trash/example2.png"><img src="trash/example2.png"></a>
+            </div>
+        </article>
+        
+        <!--Example plugin 3 -->
+    	<article>
+        	<div class="i-left">
+            	<!-- Plugin code start ---------->
+                <div class="ideaboxWeather" id="example3">
+                    <h1>Loading....</h1>
+                </div>
+                <!-- Plugin code end ------------>
+            </div>
+            <div class="i-right">
+            	<h4>Click image for full view</h4>
+            	<a href="trash/example3.png"><img src="trash/example3.png"></a>
+            </div>
+        </article>
+        
+        <!--Example plugin 4 -->
+    	<article>
+        	<div class="i-left">
+            	<!-- Plugin code start ---------->
+                <div class="ideaboxWeather" id="example4">
+                    <h1>Loading....</h1>
+                </div>
+                <!-- Plugin code end ------------>
+            </div>
+            <div class="i-right">
+            	<h4>Click image for full view</h4>
+            	<a href="trash/example4.png"><img src="trash/example4.png"></a>
+            </div>
+        </article>
+        
+        <!--Example plugin 5 -->
+    	<article>
+        	<div class="i-left">
+            	<!-- Plugin code start ---------->
+                <div class="ideaboxWeather" id="example5">
+                    <h1>Loading....</h1>
+                </div>
+                <!-- Plugin code end ------------>
+            </div>
+            <div class="i-right">
+            	<h4>Click image for full view</h4>
+            	<a href="trash/example5.png"><img src="trash/example5.png"></a>
+            </div>
+        </article>
+        
+        
+        <div class="description">
+        	<h2>All Features With Defaults</h2>
+            <h4>Click image for full view</h4>
+            <a href="trash/all_features_defaults.png"><img src="trash/all_features_defaults.png"></a>
+        </div>
+        
+    </section>
+<!-- ******************************************** -->  
+<script>
+	$(document).ready(function(){
+		
+		$('#example1').ideaboxWeather({
+			location		:'New York, US'
+		});
+		
+		$('#example2').ideaboxWeather({
+			template	:"horizontal",
+			themecolor	:"#403934",
+			location	:"Melbourne",
+			daycount	:6,
+			imgpath		:"http://openweathermap.org/img/w/"
+		});
+		
+		$('#example3').ideaboxWeather({
+			themecolor	:"#098da1",
+			location	:"İstanbul",
+			lang		:"tr",
+			days		:["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
+			dayssmall	:["Pa", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"],
+			todaytext	:'Bugün',
+			daycount	:4
+		});
+		
+		$('#example4').ideaboxWeather({
+			template	:"horizontal",
+			themecolor	:"#4c4067",
+			location	:"London",
+			daycount	:6,
+			metric		:'F',
+			imgpath		:"http://openweathermap.org/img/w/",
+			radius		:false
+		});
+		
+		$('#example5').ideaboxWeather({
+			lang		:"sp",
+			themecolor	:"#981238",
+			location	:"Barcelona",
+			daycount	:14,
+			metric		:'C',
+			days		:["Domingo", "Lones", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+			dayssmall	:["Do", "Lo", "Ma", "Mi", "Ju", "Vi", "Sa"],
+			todaytext	:'Hoy',
+		});
+		
+		
+		/*this code only demo page big view for codes*/
+		
+		$(".i-right a, .description a").on("click",function(event){
+			event.preventDefault();
+			$("body").append("<div class='ipopup' onclick='closepopup();'><h2 onclick='closepopup();'>CLOSE</h2><img src='"+$(this).attr("href")+"'></div>");
+		});
+				
+		/*this code only demo page big view for codes*/
+	});	
+	
+	function closepopup()
+	{
+		$(".ipopup").remove();
+	}
+</script>
+</body>
+</html>
