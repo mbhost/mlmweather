@@ -11,7 +11,10 @@
 		<!-- include flatWeatherPlugin.js -->
 		<script src="js/jquery.flatWeatherPlugin.min.js"></script>  
 
-		<script type="text/javascript">
+	<!--	<script type="text/javascript">
+		
+		
+		
 		$(document).ready(function() {
 
 			//Setup the plugin, see readme for more examples
@@ -29,7 +32,21 @@
 			  //units : "metric" or "imperial" default: "auto"
 			});
 
-		});
+		});   
+		</script>   -->
+		
+		
+		<script type="text/javascript">
+		
+		var example4 = $("#example-4").flatWeatherPlugin({
+	location: "New York, NY",
+	country: "USA",
+	api: "yahoo",
+	view : "forecast",
+	loadingAnimation : false,
+	units : "metric", //force metric units 
+});
+		
 		</script>
 
 		<style>
